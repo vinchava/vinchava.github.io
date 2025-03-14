@@ -1,0 +1,9 @@
+* {
+    font-family: "Noto Sans", sans-serif;
+    background-color: antiquewhite;
+}
+
+.reference {
+    display: none;
+    flex-direction: column;
+}
