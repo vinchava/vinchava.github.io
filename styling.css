@@ -1,0 +1,101 @@
+* {
+	box-sizing: border-box;
+
+}
+
+body {
+	font-family: "Work Sans", sans-serif;
+	padding: 20px;
+	opacity: 0;
+	transition: all 0.8s ease;
+}
+
+h1 {
+	font-weight: 800;
+	font-size: 3em;
+}
+h2 {
+	font-weight: 600;
+	font-size: 1.8em;
+}
+h3 {
+	font-weight: 400;
+}
+h4 {
+	font-size: 1.5em;
+}
+
+/* Link Styling */
+a {
+	color:darkblue;
+	text-decoration: none;
+	transition: all 0.5s ease;
+}
+a:hover {
+	color:chartreuse;
+	transition: all 0.5s ease;
+}
+
+p {
+	font-size: 1.2em;
+}
+
+.container {
+	max-width: 800px;
+	margin: auto;
+}
+
+/* Greeting Styling */
+.greeting {
+	font-family: "Work Sans", sans-serif;
+}
+.greeting .line {
+	opacity: 0;
+	transform: translateY(25px);
+	transition: opacity 0.8s ease, transform 0.8s ease;
+}
+#name {
+	font-family: "Jersey 25", monospace;
+}
+
+/* Section Styling */
+.section {
+	opacity: 0;
+	transform: translateY(25px);
+	transition: all 0.8s ease;
+}
+.section-header {
+	cursor: pointer;
+	transition: color 0.5s ease;
+	font-family: "Boldonse";
+	display: inline-block;
+}
+.section-header:hover {
+	color: #555;
+}
+.section-content {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 1s ease;
+}
+.section-content.active {
+	max-height: 800px;
+	transition: max-height 2s ease;
+}
+
+.resume {
+
+}
+#certs {}
+
+/* Footer Styling */
+#footer {
+	text-align: center;
+	font-size: 1em;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 10px;
+	opacity: 1;
+	font-family: "Jersey 25", "Consolas", monospace;
+}

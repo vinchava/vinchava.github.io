@@ -1,39 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Google Analytics tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R066H58REJ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-R066H58REJ');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vince.html</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Bungee+Shade&family=Lilita+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
-</head>
-<body>
-    <div id="intro">
-        <h1>hey, friend.</h1>
-        <h2>welcome to my page. i'm glad you came.</h2>
-    </div>
-    <h3>about</h3>
-    <h3>projects</h3>
-    <h3>contact</h3>
-    
-
-    <!--reference materials below-->
-    <br>
-    <div class="reference">
-        <img src="https://html.com/wp-content/uploads/html5_cheat_sheet_tags.png">
-        <br>
-        <img src="https://www.hubspot.com/hs-fs/hubfs/Update%20css%20margin%20vs%20padding-5%20.webp?width=650&height=470&name=Update%20css%20margin%20vs%20padding-5%20.webp">
-        
-    </div>
-</body>
+	<head>
+		<!-- google analytics tag -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R066H58REJ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-R066H58REJ');
+		</script>
+		<!-- webpage metadata -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>vince.html</title>
+		<!-- style settings -->
+		<link rel="stylesheet" href="styling.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<!-- fonts: 'Boldonse', 'Inconsolata', 'Jersey 25', 'Work Sans' -->
+		<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inconsolata:wght@200..900&family=Jersey+25&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<!-- audio element -->
+		<audio id="background-audio" src="" autoplay loop></audio>
+		<!-- interactive elements -->
+		<script src="script.js"></script>
+		<!-- page content -->
+		<div class="container">
+			<!-- greeting -->
+			<div class="greeting">
+				<h1 class="line">hey, friend.</h1>
+				<h2 class="line">welcome to my page. i'm glad you're here.</h2>
+			</div>
+			<br>
+			<!-- Sections -->
+			<div class="sections">
+				<div class="section" id="about-section">
+					<h3 class="section-header">about</h3>
+					<div class="section-content">
+						<p>hi! i'm <span id="name">vince</span>. i make things.</p>
+						<div class="resume">
+							<h4>education</h4>
+							<ul>
+								<li><strong>B.Sc. Mathematics, Cum Laude </strong> | Morgan State University</li>
+							</ul>
+							<h4>certifications</h4>
+							<ul id="certs">
+								<li>IBM Data Science Professional Certificate</li>
+								<li>AWS Certified Cloud Practitioner (CLF-C02)</li>
+								<li>CompTIA Security+</li>
+							</ul>
+							<h4>experience</h4>
+							<ul>
+								<li><strong>Digital Content Creator</strong> | Freelance</li>
+								<li><strong>Software Engineer</strong> | Intel Corporation</li>
+								<li><strong>Data Science Intern</strong> | Johns Hopkins University Applied Physics Laboratory</li>
+								<li><strong>IT Support Specialist</strong> | Morgan State University</li>
+							</ul>
+							<h4>skills</h4>
+							<ul></ul>
+						</div>
+					</div>
+				</div>
+				<div class="section" id="projects-section">
+					<h3 class="section-header">projects</h3>
+					<div class="section-content">
+						<p>Coming soon...</p>
+					</div>
+				</div>
+				<div class="section" id="contact-section">
+					<h3 class="section-header">contact</h3>
+					<div class="section-content">
+						<p>connect with me on <a href="https://www.linkedin.com/in/v-havaway/" target="_blank">linkedin</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<footer>
+		<p id="footer">Copyright © 2025 Vince Havaway. All rights reserved.</p>
+	</footer>
 </html>
