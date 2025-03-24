@@ -1,13 +1,32 @@
+:root {
+	--bg-color: #F6F1DE;
+	--text-color: black;
+	--link-color: #80CBC4;
+	--link-hover-color: #FFB433;
+	--button-bg: transparent;
+	--button-text: inherit;
+}
+
+body.dark-mode {
+	--bg-color: #1b1b1b;
+	--text-color: #FBF8EF;
+	--link-color: #FFB433;
+	--link-hover-color: #80CBC4;
+	--button-bg: transparent;
+	--button-text: inherit;
+}
+
 * {
 	box-sizing: border-box;
-
 }
 
 body {
 	font-family: "Work Sans", sans-serif;
 	padding: 20px;
 	opacity: 0;
-	transition: all 0.8s ease;
+	transition: opacity 0.8s ease;
+	color: var(--text-color);
+	background-color: var(--bg-color);
 }
 
 h1 {
@@ -27,17 +46,21 @@ h4 {
 
 /* Link Styling */
 a {
-	color:darkblue;
+	color: var(--link-color);
 	text-decoration: none;
 	transition: all 0.5s ease;
 }
 a:hover {
-	color:chartreuse;
+	color: var(--link-hover-color);
 	transition: all 0.5s ease;
 }
 
 p {
 	font-size: 1.2em;
+}
+
+ul {
+	list-style-type: none;
 }
 
 .container {
@@ -52,41 +75,57 @@ p {
 .greeting .line {
 	opacity: 0;
 	transform: translateY(25px);
-	transition: opacity 0.8s ease, transform 0.8s ease;
-}
-#name {
-	font-family: "Jersey 25", monospace;
+	transition: all 0.8s ease;
 }
 
 /* Section Styling */
 .section {
 	opacity: 0;
 	transform: translateY(25px);
-	transition: all 0.8s ease;
+	transition: all 0.5s ease;
 }
 .section-header {
 	cursor: pointer;
-	transition: color 0.5s ease;
+	transition: all 0.5s ease;
 	font-family: "Boldonse";
 	display: inline-block;
 }
 .section-header:hover {
-	color: #555;
+	color: var(--link-hover-color);
+	transition: all 0.5s ease
 }
 .section-content {
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 1s ease;
+	transition: all 1s ease;
+	padding: 10px;
+	border-radius: 5px;
 }
 .section-content.active {
 	max-height: 800px;
-	transition: max-height 2s ease;
+	transition: all 1s ease;
 }
 
-.resume {
-
+#theme-toggle {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	cursor: pointer;
+	color: var(--button-text);
+	background-color: var(--button-bg);
+	transition: all 0.5s ease;
+	border: 1px solid var(--text-color);
+	border-radius: 5px;
+	padding: 5px 10px;
 }
-#certs {}
+
+#resume {
+	border: black 1px solid;
+	text-align: center;
+}
+.title {
+	font-weight: 700;
+}
 
 /* Footer Styling */
 #footer {
@@ -98,4 +137,6 @@ p {
 	padding: 10px;
 	opacity: 1;
 	font-family: "Jersey 25", "Consolas", monospace;
+	color: var(--text-color);
+	transition: all 0.5s ease;
 }
