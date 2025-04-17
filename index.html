@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- webpage metadata -->
+		<meta charset="UTF-8" />
+		<title>vince.html</title>
+		<meta name="description" content="Welcome to vince.html, a website developed by Vince Havaway." />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta property="og:title" content="vince.html" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://vinchava.github.io/" />
+		<meta property="og:image" content="" />
 		<!-- google analytics tag -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-R066H58REJ"></script>
 		<script>
@@ -9,80 +18,179 @@
 			gtag('js', new Date());
 			gtag('config', 'G-R066H58REJ');
 		</script>
-		<!-- webpage metadata -->
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>vince.html</title>
 		<!-- style settings -->
-		<link rel="stylesheet" href="styling.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<!-- fonts: 'Boldonse', 'Inconsolata', 'Jersey 25', 'Work Sans' -->
-		<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Inconsolata:wght@200..900&family=Jersey+25&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./css/styling.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Jersey+10&family=Jersey+25&family=Lilita+One&family=Martian+Mono:wght@100..800&family=Rampart+One&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Mono:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
 	</head>
-	<body>
-		<!-- audio element -->
-		<audio id="background-audio" src="" autoplay loop></audio>
-		<!-- interactive elements -->
-		<script src="script.js"></script>
-		<!-- toggle dark mode -->
-		<button id="theme-toggle">☀️ / 🌙</button>
+	<body data-activated="false">
+		<!-- banner and theme toggle -->
+		<header id="banner">
+			<div id="banner-text">vince.html</div>
+			<button id="theme-toggle" title="toggle theme"></button>
+		</header>
+		<!-- audio and miniplayer -->
+		<audio 
+			id="bg-audio" 
+			src=""
+			loop
+			autoplay
+			muted
+		></audio>
+		<button id="miniplayer-toggle" title="show/hide miniplayer">
+			<span class="material-icons-round">expand_less</span>
+		</button>
+		<div id="miniplayer-container" class="hidden">		
+			<div id="miniplayer">
+				<img id="track-thumbnail" src="" alt="_album art" />
+				<div id="track-info">
+						<div id="track-title">_title</div>
+						<div id="track-artist">_artist</div>
+						<div id="track-album">_album</div>
+						<div id="track-year">_year</div>
+				</div>
+				<div id="progress-bar">
+				</div>
+				<div class="controls">
+					<button id="prev"><span class="material-icons-round">fast_rewind</span></button>
+					<button id="playback-toggle"><span id="playback-icon" class="material-icons-round">play_arrow</span></button>					  
+					<button id="next"><span class="material-icons-round">fast_forward</span></button>
+					<button id="mute-toggle"><span class="material-icons-round">volume_off</span></button>
+				</div>
+			</div>
+		</div>			
 		<!-- page content -->
-		<div class="container">
-			<!-- greeting -->
-			<div class="greeting">
-				<h1 class="line">hey, friend.</h1>
-				<h2 class="line">welcome to my page. i'm glad you're here.</h2>
-			</div>
-			<br>
-			<div>
-				<div class="section" id="about-section">
-					<!-- about section -->
-					<h3 class="section-header">about</h3>
+		<main>
+			<button id="scroll-top-btn" class="show" title="scroll to top">
+				<span class="material-icons-round">arrow_upward</span>
+			</button>
+			<br />
+			<h1 class="greeting"><span class="head">hey, friend.</span></h1>
+			<p class="greeting">welcome to my page. <span class="head">i</span>'m glad you're here.</p>
+			<br />
+			<div class="section" id="about-section">
+					<h2 class="section-header head" data-toggle-target=".section-content">about</h2>
 					<div class="section-content">
-						<!-- intro -->
-						<p>hi! i'm vince. i make things.</p>
-						<br>
+						<p>hi! i'm <span class="head">vince</span>. i like to make things.</p>
+						<p class="ipsum">
+							Fusce ac velit ipsum. Nam tincidunt maximus diam sit amet ullamcorper. Fusce facilisis neque diam, in congue diam lacinia vitae. 
+						</p>
+						<p class="ipsum">
+							Morbi eu ipsum ut ipsum finibus pharetra. Vivamus interdum ligula a justo semper euismod. Duis molestie turpis urna, at dapibus justo sagittis eu.
+						</p>
 						<!-- resume -->
-						<!-- <div id="resume">
-							<h4>education</h4>
-							<ul>
-								<li><strong class="title">B.Sc. Mathematics, Cum Laude </strong> | Morgan State University</li>
-							</ul>
-							<h4>certifications</h4>
-							<ul id="certs">
-								<li>IBM Data Science Professional Certificate | In Progress</li>
-								<li>AWS Certified Cloud Practitioner (CLF-C02) | In Progress</li>
-								<li>CompTIA Security+ | In Progress</li>
-							</ul>
-							<h4>experience</h4>
-							<ul>
-								<li><strong class="title">Digital Content Creator</strong> | Freelance</li>
-								<li><strong class="title">Software Engineer</strong> | Intel Corporation</li>
-								<li><strong class="title">Data Science Intern</strong> | Johns Hopkins University Applied Physics Laboratory</li>
-								<li><strong class="title">IT Support Specialist</strong> | Morgan State University</li>
-							</ul>
-							<h4>skills</h4>
-							<ul></ul>
-						</div> -->
+						<h3 class="resume-header" data-toggle-target=".resume-content">resume</h3>
+						<div class="resume-content">
+							<h4 class="edu-header" data-toggle-target=".edu-content">education</h4>
+							<div class="edu-content">
+								<ul>
+									<li><span class="title">B.S. Mathematics, Cum Laude</span> | Morgan State University</li>
+									<ul>
+										<li>Class of December 2020</li>
+									</ul>
+								</ul>
+							</div>
+							<h4 class="certs-header" data-toggle-target=".certs-content">certifications</h4>
+							<div class="certs-content">
+								<ul id="certs">
+									<li><span class="title">Introduction to Prompt Engineering</span> | Learn Prompting</li>
+									<ul>
+										<li>April 2025</li>
+										<li>Credential ID: <a href="https://learnprompting.thinkific.com/certificates/k4yvozphe6" target="_blank">k4yvozphe6</a></li>
+									</ul>
+									<li><span class="title">ChatGPT for Everyone</span> | Learn Prompting and OpenAI</li>
+									<ul>
+										<li>April 2025</li>
+										<li>Credential ID: <a href="https://learnprompting.thinkific.com/certificates/jq0w3qg3ek" target="_blank">jq0w3qg3ek</a></li>
+									</ul>
+									<li><span class="title">AWS Certified Cloud Practitioner (CLF-C02)</span> | Amazon Web Services</li>
+									<ul>
+										<li>In Progress</li>
+									</ul>
+									<li><span class="title">Google Cybersecurity Professional Certificate</span> | Google</li>
+									<ul>
+										<li>In Progress</li>
+									</ul>
+								</ul>
+							</div>
+							<h4 class="exp-header" data-toggle-target=".exp-content">experience</h4>
+							<div class="exp-content">
+								<ul>
+									<li><span class="title current">Digital Content Creator</span></li>
+									<ul>
+										<li>Since January 2025</li>
+									</ul>
+									<li><span class="title">Software Engineer</span> | Intel</li>
+									<ul>
+										<li>October 2021 - November 2024</li>
+									</ul>
+									<li><span class="title">Data Science Intern</span> | JHU APL</li>
+									<ul>
+										<li>Summer 2020</li>
+										<li>Summer 2019</li>
+									</ul>
+									<li><span class="title">IT Support Specialist</span> | Morgan State University</li>
+									<ul>
+										<li>August 2018 - May 2019</li>
+									</ul>
+								</ul>
+							</div>
+						</div>
 					</div>
-				</div>
-				<div class="section" id="projects-section">
-					<h3 class="section-header">projects</h3>
-					<div class="section-content">
-						<p>Coming soon...</p>
+			</div>
+			<div class="section" id="projects-section">
+				<h2 class="section-header head" data-toggle-target=".section-content">projects</h2>
+				<div class="section-content">
+					<!-- interactive heat map -->
+					<h3 class="project-header" data-toggle-target=".project-content">interactive heat map</h3>
+					<div class="project-content">
+						<div id="heatmap-container"></div>
 					</div>
-				</div>
-				<div class="section" id="contact-section">
-					<h3 class="section-header">contact</h3>
-					<div class="section-content">
-						<p>connect with me on <a href="https://www.linkedin.com/in/v-havaway/" target="_blank">linkedin</a></p>
+					<h3 class="project-header" data-toggle-target=".project-content">gen-ai artwork</h3>
+					<div class="project-content">
+						<div id="art-container">
+							<div class="carousel-wrapper">
+								<div class="carousel-track"></div>
+								<button class="carousel-arrow left">
+									<span class="material-icons-round">chevron_left</span>
+								</button>
+								<button class="carousel-arrow right">
+									<span class="material-icons-round">chevron_right</span>
+								</button>
+							</div>							
+						</div>
 					</div>
+					<p class="ipsum">More projects coming soon!</p>
 				</div>
 			</div>
-		</div>
+			<div class="section" id="contact-section">
+				<h2 class="section-header head" data-toggle-target=".section-content">contact</h2>
+				<div class="section-content">
+					<p>connect with me on <a href="https://www.linkedin.com/in/v-havaway/" target="_blank">linkedin</a></p>
+					<p>send me an <a class="visited" href="mailto:32bgm86iz@mozmail.com" target="_blank">email</a></p>
+				</div>
+			</div>
+			<div id="command-palette" class="palette hidden">
+				<input id="command-input" type="text" placeholder="type to search" autofocus />
+				<ul id="command-list"></ul>
+			</div>
+		</main>	
+		<footer>
+			<p id="footer">Copyright © 2025 <span id="name">Vince Havaway</span>. All rights reserved.</p>
+		</footer>
+		<!-- LIBRARIES -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xterm@4.15.0/css/xterm.css" />
+		<script src="https://cdn.jsdelivr.net/npm/xterm@4.15.0/lib/xterm.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/xterm-addon-fit@0.7.0/lib/xterm-addon-fit.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/browserfs@1.4.3/dist/browserfs.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+		<!-- SCRIPTS -->
+		<script defer src="./js/script.js"></script>
+		<script defer src="./js/heatmap.js"></script>	
 	</body>
-	<footer>
-		<p id="footer">Copyright © 2025 Vince Havaway. All rights reserved.</p>
-	</footer>
 </html>

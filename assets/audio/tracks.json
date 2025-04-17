@@ -1,0 +1,35 @@
+[
+    {
+        "index": 0,
+        "title": "Beneath the Mask (Instrumental)",
+        "artist": "Shoji Meguro",
+        "album": "Persona5 OST",
+        "year": "2017",
+        "src": "./assets/audio/beneath_the_mask-instrumental.mp3",
+        "thumbnail": "https://helixsounds.com/cdn/shop/products/8BIT-8143_-_Atlus_Sound_Team_-_Persona_5_Royal_Original_Soundtrack.png"
+    }, {
+        "index": 1,
+        "title": "Beneath the Mask (Instrumental) - Rain",
+        "artist": "Shoji Meguro",
+        "album": "Persona5 OST",
+        "year": "2017",
+        "src": "./assets/audio/beneath_the_mask-instrumental-rain.mp3",
+        "thumbnail": "https://helixsounds.com/cdn/shop/products/8BIT-8143_-_Atlus_Sound_Team_-_Persona_5_Royal_Original_Soundtrack.png"
+    }, {
+        "index": 2,
+        "title": "Freedom and Peace",
+        "artist": "Shoji Meguro",
+        "album": "Persona5 OST",
+        "year": "2017",
+        "src": "./assets/audio/freedom_and_security.mp3",
+        "thumbnail": "https://helixsounds.com/cdn/shop/products/8BIT-8143_-_Atlus_Sound_Team_-_Persona_5_Royal_Original_Soundtrack.png"
+    }, {
+        "index": 3,
+        "title": "Gentle Madman",
+        "artist": "Shoji Meguro",
+        "album": "Persona5 Royal OST",
+        "year": "2022",
+        "src": "./assets/audio/gentle_madman.mp3",
+        "thumbnail": "https://helixsounds.com/cdn/shop/products/8BIT-8143_-_Atlus_Sound_Team_-_Persona_5_Royal_Original_Soundtrack.png"
+    }
+]
