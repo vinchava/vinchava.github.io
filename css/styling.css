@@ -27,6 +27,7 @@ body.dark-mode {
 	user-select: none; /* disable text selection */
 	-ms-overflow-style: none;  /* disable scrollbar - edge */
     scrollbar-width: none;  /* disable scrollbar - firefox */
+	touch-action: manipulation;
 }
 
 .ipsum {
@@ -34,6 +35,10 @@ body.dark-mode {
 	font-weight: lighter;
 	font-size: 0.9rem;
 }
+li.ipsum {
+	font-size: 0.8rem;
+}
+
 .head {
 	color: var(--head);
 
@@ -44,7 +49,7 @@ body.dark-mode {
 #name:hover {
 	color: cyan;
 	transition: all 0.6s ease;
-	border-bottom: 1px solid var(--hover-color);
+	border-bottom: 1px solid cyan;
 }
 
 #banner {
@@ -77,7 +82,6 @@ body.dark-mode {
 	border: none;
 	padding: 0;
 	transition: all 0.6s ease;
-
 } 
 #theme-toggle:hover {
 	color: var(--hover-color);
@@ -88,7 +92,7 @@ body {
 	font-family: "Red Hat Mono", monospace;
 	opacity: 0;
 	width: 80vw;
-	max-width: 800px;
+	max-width: 640px;
 	min-width: 400px;
 	margin: 2rem auto;
 	padding: 2rem;
@@ -111,6 +115,10 @@ body {
 	flex-direction: column;
 	justify-content: space-between; */
 } 
+
+.section-header {
+	margin-bottom: 10px;
+}
 .section-header,
 .resume-header,
 .project-header,
@@ -119,11 +127,20 @@ body {
 .exp-header,
 .skills-header {
 	transition: all 0.6s ease;
-	font-weight: 600;
+	display: inline-block;
+}
+
+.project-header {
+	margin-bottom: 10px;
+}
+
+.resume-header {
+	margin: 0 0 .5rem;
 }
 
 .resume-content {
-	padding: 0.5rem 0;
+	padding: 0.5rem;
+	margin: 0;
 }
 
 .section-header:hover,
@@ -136,22 +153,6 @@ body {
 	color: var(--hover-color);
 	transition: color 0.6s ease, transform 0.6s ease;
 	cursor: pointer;
-	transform: translateX(10px)
-}
-.resume-header,
-.project-header {
-	transition: all 0.6s ease;
-	display: inline-block;
-	margin: 0.5rem 0;
-}
-
-.edu-header,
-.certs-header,
-.exp-header,
-.skills-header {
-	transition: all 0.6s ease;
-	display: inline-block;
-	margin: 0.5rem 0;
 }
 
 .section-content,
@@ -164,25 +165,36 @@ body {
 	height: 0;
 	overflow: hidden;
 	transition: height 1s ease;
+	margin: 0;
+	padding: 0;
 }
 
 .title {
 	font-weight: 600;
 	color: var(--head);
 }
+.title:hover {
+	color: var(--head);
+}
 
 #footer {
+	display: block;
 	text-align: center;
-	font-size: 0.8rem;
-	position: fixed;
+	transform: translate(-50%, 20px);
+	left: 50%;
 	width: 100vw;
+	min-width: 500px;
+	font-size: 0.7rem;
+	position: fixed;
 	bottom: 0;
-	left: 0;
 	color: var(--text-color);
 	z-index: 9998;
 	font-family: "Red Hat Mono", monospace;
 	padding: 0.5rem;
+	background-color: var(--bg-color);
+	box-shadow: 0 0 10px var(--bg-color);
 	overflow: hidden;
+	height: 3rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -196,18 +208,22 @@ h1 {
 }
 
 h2 {
-	font-weight: 400;
-	font-size: 1.5rem;
+	font-weight: 500;
+	font-size: 1.3rem;
 
 }
 
 h3 {
 	font-size: 1.2rem;
+	font-weight: 450;
 }
 
 h4 {
 	font-size: 1.1rem;
-	margin-bottom: 2rem;
+	font-weight: 400;
+}
+h4::before {
+	content: "> ";
 }
 
 h5 {
@@ -219,9 +235,12 @@ p {
 }
 ul li {
 	list-style: "> ";
-	font-size: 0.9rem;
-	margin-bottom: 1rem;
+	font-size: 0.8rem;
+	margin-bottom: 0.5rem;
+	padding: 0;
+	
 }
+
 a {
 	color: var(--link-color);
 	text-decoration: none;
@@ -244,7 +263,7 @@ a:active {
 #heatmap-container {
 	position: relative;
 	max-width: 800px;
-	margin: 1em auto;
+	margin: 1rem auto;
 }
 .heatmap-canvas {
 	border-radius: 8px;
@@ -290,7 +309,7 @@ canvas {
 }
 .settings-button {
 	font-family: "Space Mono", monospace;
-	font-size: 0.8em;
+	font-size: 1rem;
 	text-align: center;
 	background: transparent;
 	color: white;
@@ -332,7 +351,7 @@ canvas {
 	padding: 10px;
 	color: white;
 	font-size: 0.8em;
-	font-family: "Space Mono", monospace;
+	font-family: "Red Hat Mono", monospace;
 	border-radius: 10px;
 	z-index: 8;
 }
@@ -354,10 +373,9 @@ canvas {
 .carousel-wrapper {
 	position: relative;
 	width: 100%;
-	max-width: 100%;
 	overflow: hidden;
-	margin: 2rem auto;
-	border-radius: 12px;
+	margin: 1rem auto;
+	border-radius: 10px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -432,6 +450,7 @@ canvas {
 #command-input {
     width: 100%;
     font-size: 1em;
+		font-family: 'Red Hat Mono', monospace;
     padding: 10px;
     border: 1px solid var(--text-color);
     border-radius: 5px;
@@ -460,15 +479,26 @@ canvas {
     color: black;
 }
 
-#miniplayer-toggle {
+#miniplayer-container {
 	position: fixed;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: 70px;
+	bottom: 85px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	align-items: center;
+	z-index: 8000;
+	pointer-events: none;
+}
+
+#miniplayer-toggle {
+	position: fixed;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
 	width: 36px;
 	height: 24px;
-	padding: 0;
-	margin: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -478,23 +508,11 @@ canvas {
 	border-radius: 10px;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 	cursor: pointer;
+	transition: color 0.6s ease;
 	z-index: 8001;
-	transition: all 0.6s ease;
-  }
-  
-
-#miniplayer-toggle .material-icons-round {
-	font-size: 20px;
-	line-height: 1;
-	display: block;
-	padding-right: 0.25px;
 }
 
 
-/* When player is visible */
-#miniplayer-toggle.above-player {
-	bottom: 460px;
-}
 #miniplayer-toggle:hover {
 	color: var(--hover-color);
 }
@@ -512,33 +530,18 @@ canvas {
 	pointer-events: auto;
 }
 
-#miniplayer-container {
-	position: fixed;
-	left: 50%;
-	transform: translateX(-50%) translateY(0);
-	opacity: 1;
-	z-index: 8000;
-	transition: all 0.6s ease;
-	margin: auto;
-	bottom: 70px;
-	pointer-events: auto;
-	height: auto;
-	width: max-content;
-}
-
-/* Slide down the player when hidden */
-#miniplayer-container.hidden {
-	transform: translateX(-50%) translateY(400px);
-	transition: all 0.6s ease;
+#miniplayer.hidden {
+	transform: translateY(100%);
 	opacity: 0;
 	pointer-events: none;
 }
+
 .controls {
 	display: flex;
 	justify-content: space-evenly;
 	flex-wrap: nowrap;
 	width: 100%;
-	margin-top: 0.5rem;
+	margin-top: 0;
 	padding: 0.5rem;
 }
 .controls button {
@@ -556,14 +559,19 @@ canvas {
 }
 #mute-toggle {
 	position: fixed;
-	top: 0.6rem;
-	right: 0.3rem;
+	top: 20px;
+	right: 20px;
 	padding: 0;
 	color: white;
-	background: transparent;
+	background: rgba(0, 0, 0, 0.5);
 	border: none;
-	border-radius: 10px;
+	border-radius: 5px;
 	cursor: pointer;
+	padding: 2px 4px;
+}
+#mute-toggle:hover {
+	color: var(--hover-color);
+	transition: all 0.6s ease;
 }
 #track-info {
 	display: flex;
@@ -587,8 +595,30 @@ canvas {
 	border-radius: 10px;
 	border: 2px solid var(--text-color);
 	width: 90%;
-	margin: 1rem;
+	margin: .8rem 1rem;
 }
+
+#progress-bar {
+	width: 85%;
+	height: 4px;
+	margin-top: 1rem;
+	margin-bottom: 0;
+	background-color: rgba(255, 255, 255, 0.6);
+	border-radius: 10px;
+	overflow: hidden;
+	cursor: pointer;
+	position: relative;
+}
+
+#progress-fill {
+	height: 100%;
+	width: 0%;
+	background-color: var(--hover-color);
+	border-radius: 4px;
+	transition: width 0.1s linear;
+}
+
+
 hr {
 	width: 70%;
 	padding: 0;
@@ -596,7 +626,7 @@ hr {
 }
 #scroll-top-btn {
 	position: fixed;
-	bottom: 50px;
+	bottom: 20px;
 	right: 40px;
 	z-index: 9999;
 	color: var(--text-color);
@@ -613,11 +643,4 @@ hr {
 }
 #scroll-top-btn:hover {
 	color: var(--hover-color);
-}
-
-#miniplayer.hidden {
-	transform: translateY(100%);
-	opacity: 0;
-	pointer-events: none;
-	transition: transform 0.6s ease, opacity 0.6s ease;
 }
