@@ -26,7 +26,7 @@ body.dark-mode {
 	box-sizing: border-box; /* include padding and border in element's total width and height */
 	user-select: none; /* disable text selection */
 	-ms-overflow-style: none;  /* disable scrollbar - edge */
-    scrollbar-width: none;  /* disable scrollbar - firefox */
+  scrollbar-width: none;  /* disable scrollbar - firefox */
 	touch-action: manipulation;
 }
 
@@ -647,7 +647,40 @@ hr {
 	color: var(--hover-color);
 }
 
+#psa {
+	border: none;
+	border-radius: 10px;
+	max-width: 70vw;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	padding: 1rem 3rem;
+}
+#psa p {
+	font-size: 0.8rem;
+	font-family: "Noto Sans", sans-serif;
+	color: black;
+	margin: auto;
+}
+#psa h2 {
+	color: black;
+}
 #donate {
 	border: none;
 	border-radius: 10px;
+	background-color: transparent;
+	width: 150px;
+	margin: auto;
+	display: inline-block;
+	transition: all 0.6s ease;
+} 
+#donate:hover {
+	color: var(--hover-color);
+	
+}
+.urgent {
+	color: var(--link-color);
+	font-weight: bold;
 }
