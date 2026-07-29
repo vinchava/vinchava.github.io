@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "**Personal website of Vince Havaway** Built as a digital calling card, creative sandboz, and resume hub.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinchava/vinchava.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vinchava/vinchava.github.io/issues"
+  },
+  "homepage": "https://github.com/vinchava/vinchava.github.io#readme",
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
