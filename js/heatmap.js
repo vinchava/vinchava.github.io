@@ -277,3 +277,14 @@ function keyPressed() {
     if (toolTipText) toolTipText.hide();
 	}
 }
+
+// Exports for testing
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = {
+    initGrid,
+    getGrid: () => grid,
+    setGrid: (g) => { grid = g; },
+    setCols: (c) => { cols = c; },
+    setRows: (r) => { rows = r; }
+  };
+}
