@@ -277,3 +277,7 @@ function keyPressed() {
     if (toolTipText) toolTipText.hide();
 	}
 }
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { getCanvasSize };
+}
