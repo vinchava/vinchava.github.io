@@ -30,6 +30,11 @@ body.dark-mode {
 	touch-action: manipulation;
 }
 
+*:focus-visible {
+	outline: 2px solid var(--hover-color);
+	outline-offset: 2px;
+}
+
 .ipsum {
 	color: var(--text-alt);
 	font-weight: lighter;
