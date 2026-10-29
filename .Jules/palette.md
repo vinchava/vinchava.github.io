@@ -1,0 +1,3 @@
+## 2025-05-19 - Accessibility of Icon-Only Buttons using Material Icons Ligatures
+**Learning:** When using Material Icons ligatures (where the icon is defined by text content within a `<span>`, e.g., `<span class="material-icons-round">play_arrow</span>`), screen readers will read the ligature text aloud (e.g., "play arrow") if not handled correctly. This can be confusing if the ligature text doesn't perfectly describe the button's action.
+**Action:** For icon-only buttons utilizing Material Icons ligatures, always add a descriptive `aria-label` attribute to the parent `<button>` element and set `aria-hidden="true"` on the child `<span>` containing the icon to hide the ligature text from screen readers.

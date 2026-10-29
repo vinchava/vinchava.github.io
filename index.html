@@ -30,8 +30,8 @@
 	<!-- banner and theme toggle -->
 	<header id="banner">
 		<div id="banner-text">vince.html</div>
-		<button id="theme-toggle" title="toggle theme">
-			<span class="material-icons-round"></span>
+		<button id="theme-toggle" title="toggle theme" aria-label="Toggle theme">
+			<span class="material-icons-round" aria-hidden="true"></span>
 		</button>
 	</header>
 	<body data-activated="false">
@@ -55,20 +55,20 @@
 					<div id="progress-fill"></div>
 				</div>				
 				<div class="controls">
-					<button id="prev"><span class="material-icons-round">fast_rewind</span></button>
-					<button id="playback-toggle"><span id="playback-icon" class="material-icons-round">play_arrow</span></button>					  
-					<button id="next"><span class="material-icons-round">fast_forward</span></button>
-					<button id="mute-toggle"><span class="material-icons-round">volume_up</span></button>
+					<button id="prev" aria-label="Previous track"><span class="material-icons-round" aria-hidden="true">fast_rewind</span></button>
+					<button id="playback-toggle" aria-label="Play/Pause track"><span id="playback-icon" class="material-icons-round" aria-hidden="true">play_arrow</span></button>
+					<button id="next" aria-label="Next track"><span class="material-icons-round" aria-hidden="true">fast_forward</span></button>
+					<button id="mute-toggle" aria-label="Mute/Unmute"><span class="material-icons-round" aria-hidden="true">volume_up</span></button>
 				</div>
 			</div>
 		</div>
-		<button id="miniplayer-toggle" title="show/hide miniplayer">
-			<span class="material-icons-round">expand_less</span>
+		<button id="miniplayer-toggle" title="show/hide miniplayer" aria-label="Show/hide miniplayer">
+			<span class="material-icons-round" aria-hidden="true">expand_less</span>
 		</button>			
 		<!-- page content -->
 		<main>
-			<button id="scroll-top-btn" title="scroll to top">
-				<span class="material-icons-round">arrow_upward</span>
+			<button id="scroll-top-btn" title="scroll to top" aria-label="Scroll to top">
+				<span class="material-icons-round" aria-hidden="true">arrow_upward</span>
 			</button>
 			<br />
 			<h1 class="greeting"><span class="head">hey, friend.</span></h1>
@@ -181,11 +181,11 @@
 						<div id="art-container">
 							<div class="carousel-wrapper">
 								<div class="carousel-track"></div>
-								<button class="carousel-arrow left">
-									<span class="material-icons-round">chevron_left</span>
+								<button class="carousel-arrow left" aria-label="Previous artwork">
+									<span class="material-icons-round" aria-hidden="true">chevron_left</span>
 								</button>
-								<button class="carousel-arrow right">
-									<span class="material-icons-round">chevron_right</span>
+								<button class="carousel-arrow right" aria-label="Next artwork">
+									<span class="material-icons-round" aria-hidden="true">chevron_right</span>
 								</button>
 							</div>							
 						</div>
